@@ -5,7 +5,7 @@ WORKDIR /app
 # 项目文件拷贝到容器 /app 下
 COPY . .
 # 下载依赖包，并构建打包文件
-RUN npn ci && npm run build
+RUN npm ci && npm run build
 
 # 使用 nginx 镜像
 FROM nginx
